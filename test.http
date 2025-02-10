@@ -1,0 +1,79 @@
+###
+get http://localhost:4004/odata/v4/phoneshop-services/msg(txt='users')
+###
+GET http://localhost:4004/odata/v4/phoneshop-services/text(you=55)
+
+### fetch all the data
+GET http://localhost:4004/odata/v4/phoneshop-services/Customer
+### Create a new product
+POST http://localhost:4004/odata/v4/phoneshop-services/Customer
+Content-Type: application/json
+
+{
+    "customerID":12234,
+    "name":"hari",
+    "mobile_no":12346789
+
+}
+### update particular 
+PATCH http://localhost:4004/odata/v4/phoneshop-services/Customer(12234)
+Content-Type: application/json
+
+{
+    "name":"anil"
+}
+###
+PUT http://localhost:4004/odata/v4/phoneshop-services/Customer(12)
+Content-Type: application/json
+
+{
+    "name":"hari",
+    "mobile_no":12346700
+}
+###
+DELETE http://localhost:4004/odata/v4/phoneshop-services/Customer(12234)
+###
+GET http://localhost:4004/odata/v4/phoneshop-services/Order
+###
+POST http://localhost:4004/odata/v4/phoneshop-services/Order
+Content-Type: application/json
+
+{
+    "orderID":12345,
+    "orderDate":"2002-12-11",
+    "amount":10000,
+    "customerID":111
+}
+###
+Put http://localhost:4004/odata/v4/phoneshop-services/Order(12345)
+Content-Type: application/json
+
+{
+    "orderID":12345,
+    "orderDate":"2002-12-14",
+    "amount":10009,
+    "customerID":111
+}
+###
+PATCH http://localhost:4004/odata/v4/phoneshop-services/Order(12345)
+Content-Type: application/json
+
+{
+    "orderDate":"2002-12-01"
+}
+###
+DELETE http://localhost:4004/odata/v4/phoneshop-services/Order(12345)
+###
+GET http://localhost:4004/odata/v4/phoneshop-services/Product
+###
+POST http://localhost:4004/odata/v4/phoneshop-services/Product
+Content-Type: application/json
+
+{
+    "productID": 1233,
+    "brand": "IQU",
+    "model": "y10",
+    "rom": 8,
+    "ram":128,
+    "price":22000.00
+}
