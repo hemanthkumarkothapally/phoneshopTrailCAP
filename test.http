@@ -39,7 +39,7 @@ POST http://localhost:4004/odata/v4/phoneshop-services/Order
 Content-Type: application/json
 
 {
-    "orderID":12345,
+    "orderID":1234,
     "orderDate":"2002-12-11",
     "amount":10000,
     "customerID":111
@@ -49,9 +49,8 @@ Put http://localhost:4004/odata/v4/phoneshop-services/Order(12345)
 Content-Type: application/json
 
 {
-    "orderID":12345,
     "orderDate":"2002-12-14",
-    "amount":10009,
+    "amount":1000900,
     "customerID":111
 }
 ###
@@ -59,7 +58,7 @@ PATCH http://localhost:4004/odata/v4/phoneshop-services/Order(12345)
 Content-Type: application/json
 
 {
-    "orderDate":"2002-12-01"
+    "orderDate":"2002-12-09"
 }
 ###
 DELETE http://localhost:4004/odata/v4/phoneshop-services/Order(12345)
